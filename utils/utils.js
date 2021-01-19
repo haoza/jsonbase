@@ -47,7 +47,8 @@ module.exports.utils = {
 						        return yyyy + MM + dd+  hh + mm + ss;
 							},
 							getRootPath: function() {
-								return path.dirname(require.main.filename || process.mainModule.filename);
+								const binPath = path.dirname(require.main.filename || process.mainModule.filename);
+								return path.join(binPath, '../assets');
 							},
 							getFileSeparator: function() {
 								return path.sep;
